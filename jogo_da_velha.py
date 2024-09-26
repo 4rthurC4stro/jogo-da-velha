@@ -10,7 +10,7 @@ def vencer(jogador):
 def verify_win():
     combinations =[
                 (0,1,2),(3,4,5),(6,7,8),
-                (0,4,8),(3,4,6),(0,3,6),
+                (0,4,8),(2,4,6),(0,3,6),
                 (1,4,7),(2,5,8)
                 ]
     for a,b,c in combinations:
@@ -30,7 +30,7 @@ space = [0] * 9
 
 
 while True:
-    verify_win()
+    
 
     if start_count % 2 == 0:
         while True:
@@ -60,7 +60,7 @@ while True:
 
             except:
                     print("digito invalido, tente novamente")
-
+    verify_win()
     if verify_tie():
         mostrar_jogo()
         print("o jogo deu empate")
