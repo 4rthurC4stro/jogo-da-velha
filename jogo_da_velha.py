@@ -16,21 +16,19 @@ def verify_win():
     for a,b,c in combinations:
         if space[a] == space[b] == space[c] and space[a] != 0:
             vencer(space[a])
+
+
 def verify_tie():
     
     return all([pos != 0 for pos in space]) 
-start_count = 0
 
+
+start_count = 0
 jog1 = 1
 jog2 = 2
 space = [0] * 9
 
-
-
-
-
-while True:
-    
+while True:   
 
     if start_count % 2 == 0:
         while True:
@@ -46,7 +44,6 @@ while True:
             except:
                 print("digito invalido, tente novamente")
                 
-
     elif start_count % 2 != 0:
         while True:
             mostrar_jogo()
